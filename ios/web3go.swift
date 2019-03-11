@@ -114,8 +114,7 @@ class web3go: NSObject {
       let to = tx.getTo()?.getHex()
       let signHash = tx.getSigHash()?.getHex()
       
-      //      let result = "\(hash!)&&\(value!)&&\(gas)&&\(gasPrise!)&&\(nonce)&&\(data!)&&\(to!)&&\(signHash!)"
-      let result = "\(hash!)&&value&&\(gas)&&gasPrise&&\(nonce)&&data&&\(to!)&&\(signHash!)"
+      let result = "\(hash!)&&\(value ?? nil)&&\(gas)&&\(gasPrise ?? nil)&&\(nonce)&&\(data ?? nil)&&\(to!)&&\(signHash!)"
       callback([result])
     } catch {
       callback(["error"])

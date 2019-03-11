@@ -30,11 +30,11 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.instructions}>address: 0xb6f94aE77977d7B0A083CF3a9fd01B2c174Feb60</Text>
+        <Text style={styles.instructions}>address: 0xdb223b162c283d1723cdb751512ad99bc7f57a68</Text>
         <Text style={styles.instructions}>amount: {this.state.ammount}</Text>
         <Button
           onPress={() => {
-            NativeModules.web3go.getBalance("0xb6f94aE77977d7B0A083CF3a9fd01B2c174Feb60", value => {
+            NativeModules.web3go.getBalance("0xdb223b162c283d1723cdb751512ad99bc7f57a68", value => {
               console.log("返回的 " + value)
               alert(value)
               this.setState({
